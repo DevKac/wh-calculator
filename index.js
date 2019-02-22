@@ -1,32 +1,30 @@
 const fs = require('fs');
-
-// const calculatorPsychicPhase = require('./calculators/psychic-phase');
-// const calculatorChargePhase = require('./calculators/charge-phase');
+const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 const calculatorRollSum = require('./calculators/roll-sum');
 const helperPrettify = require('./helpers/prettify');
 
 // main function
-(() => {
+(async () => {
   // todo: collect it to some CSV or sth
   console.log('Welcone to Warhammer calculator!');
   helperPrettify.displaySpace();
+  
   for (let target = 2; target <= 12; target++) {
     console.log('Chance for ' + target + ' with 2 dice reroll: ' + helperPrettify.displayAsPercent(calculatorRollSum.rollSum(2, target)) );
   }
   helperPrettify.displaySpace();
+  
   for (let target = 2; target <= 12; target++) {
     console.log('Chance for ' + target + ' with 2 dice reroll with full reroll: ' + helperPrettify.displayAsPercent(calculatorRollSum.rollSumFullReroll(2, target)) );
   }
   helperPrettify.displaySpace();
+  
   let results = [];
   for (let target = 2; target <= 12; target++) {
     for (let i = 1; i <= 6; i++) {
       for (let j = 1; j <= 6; j++) {
-        // console.log('Your roll is ' + i + ' and ' + j);
-        // console.log('Chance for ' + target + ' with full reroll: ' + helperPrettify.displayAsPercent(calculatorRollSum.rollSum(2, target)) );
         const minValue = Math.min(i, j);
         const maxValue = Math.max(i, j);
-        // console.log('Chance for ' + target + ' with reroll ' + minValue +': ' + helperPrettify.displayAsPercent(calculatorRollSum.rollSum(1, target - maxValue)) );
         results.push({
           target: target,
           roll: i + ', ' + j,
@@ -36,7 +34,6 @@ const helperPrettify = require('./helpers/prettify');
       }
     }
   }
-  const createCsvWriter = require('csv-writer').createObjectCsvWriter;
   const csvWriter = createCsvWriter({
     path: './output/dejo.csv',
     header: [
@@ -46,10 +43,15 @@ const helperPrettify = require('./helpers/prettify');
         {id: 'lowerReroll', title: 'Reroll of lower value'}
     ]
   });
- 
-  csvWriter.writeRecords(results).then(() => {
-    console.log('...Done');
+  await csvWriter.writeRecords(results).then(() => {
+    console.log('Saved results to dejo.csv');
   });
+  helperPrettify.displaySpace();
+
+  console.log('Charge from deep strike with 2 dice: ' + helperPrettify.displayAsPercent(calculatorRollSum.rollSum(2, 9)) );
+  console.log('Charge from deep strike with 2 dice and command reroll: ' + helperPrettify.displayAsPercent(calculatorRollSum.rollSumRerollLowest(2, 9)) );
+  console.log('Charge from deep strike with 2 dice and full reroll: ' + helperPrettify.displayAsPercent(calculatorRollSum.rollSumFullReroll(2, 9)) );
+
   
   /*
   console.log('Chance for charge from deep strike with 2 dice: ' + helperPrettify.displayAsPercent(calculatorChargePhase.deepStrikeCharge(2)) );

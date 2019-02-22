@@ -1,3 +1,13 @@
+
+function rollSumReroll(dice, target, reroll, bonus = 0, typeOfDice = 6) {
+  const rerollObject = {
+    nrOfRerolls: 1,
+    rerollValues: reroll
+  }
+  return helperDiceRolls.rollSumChanceWithOneReroll(target - bonus, rerollObject, dice, false, typeOfDice);
+}
+module.exports.rollSumReroll = rollSumReroll;
+
 const helperDiceRolls = require('../helpers/dice-rolls');
 
 function deepStrikeCharge(dice, bonus = 0, typeOfDice = 6) {
@@ -37,3 +47,8 @@ function perfectAmbushChargeWith2CommandRerolls(chargeDice, reroll, bonus = 0, t
   return result;
 }
 module.exports.perfectAmbushChargeWith2CommandRerolls = perfectAmbushChargeWith2CommandRerolls;
+
+function powerCast(dice, bonus = 0, typeOfDice = 6) {
+  return helperDiceRolls.rollSumChance(9 - bonus, dice, false, typeOfDice);
+}
+module.exports.deepStrikeCharge = deepStrikeCharge;
