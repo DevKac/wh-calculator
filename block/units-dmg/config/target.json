@@ -1,0 +1,54 @@
+{
+  "units": [
+    {
+      "name": "Infantry Squad",
+      "description": "No buffs, just T3 Sv5+",
+      "T": 3,
+      "Sv": 5,
+      "Inv": null,
+      "FnP": null,
+      "multiwound": false,
+      "bonus": []
+    },
+    {
+      "name": "Orc Boyz",
+      "description": "Painboy, just T4 Sv6+ FnP6+",
+      "T": 4,
+      "Sv": 6,
+      "Inv": null,
+      "FnP": 6,
+      "multiwound": false,
+      "bonus": []
+    },
+    {
+      "name": "Space Marine",
+      "description": "No buffs, just T4 Sv3+",
+      "T": 4,
+      "Sv": 3,
+      "Inv": null,
+      "FnP": null,
+      "multiwound": false,
+      "bonus": []
+    },
+    {
+      "name": "Grotesque",
+      "description": "Homi aura, Coven, T6 Inv4+ FnP6+",
+      "T": 6,
+      "Sv": 6,
+      "Inv": 4,
+      "FnP": 6,
+      "multiwound": true,
+      "bonus": []
+    },
+    {
+      "name": "Leman Russ",
+      "description": "No buffs, just T8 Sv3+",
+      "T": 8,
+      "Sv": 3,
+      "Inv": null,
+      "FnP": null,
+      "multiwound": true,
+      "bonus": []
+    }
+  ]
+}

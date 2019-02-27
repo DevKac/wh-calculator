@@ -1,0 +1,426 @@
+{
+  "units": [
+    {
+      "name": "Acolyte Hybrids",
+      "description": "Pure unit",
+      "members": [
+        {
+          "name": "Acolyte Hybrid",
+          "description": "No special weapon",
+          "count": 19,
+          "attacks": [
+            {
+              "A": 2,
+              "WS": 3,
+              "S": 4,
+              "AP": 1,
+              "Dmg": 1,
+              "bonus": [
+                "rending"
+              ]
+            },
+            {
+              "A": 1,
+              "WS": 3,
+              "S": 4,
+              "AP": 0,
+              "Dmg": 1,
+              "bonus": []
+            }
+          ] 
+        },
+        {
+          "name": "Acolyte Leader",
+          "description": "No special weapon",
+          "count": 1,
+          "attacks": [
+            {
+              "A": 3,
+              "WS": 3,
+              "S": 4,
+              "AP": 1,
+              "Dmg": 1,
+              "bonus": [
+                "rending"
+              ]
+            },
+            {
+              "A": 1,
+              "WS": 3,
+              "S": 4,
+              "AP": 0,
+              "Dmg": 1,
+              "bonus": []
+            }
+          ] 
+        }
+      ],
+      "buffs": [
+        [],
+        ["A+1", "S+1"]
+      ]
+    },
+    {
+      "name": "Acolyte Hybrids",
+      "description": "2 Rock Saws",
+      "members": [
+        {
+          "name": "Acolyte Hybrid",
+          "description": "No special weapon",
+          "count": 17,
+          "attacks": [
+            {
+              "A": 2,
+              "WS": 3,
+              "S": 4,
+              "AP": 1,
+              "Dmg": 1,
+              "bonus": [
+                "rending"
+              ]
+            },
+            {
+              "A": 1,
+              "WS": 3,
+              "S": 4,
+              "AP": 0,
+              "Dmg": 1,
+              "bonus": []
+            }
+          ] 
+        },
+        {
+          "name": "Acolyte Leader",
+          "description": "No special weapon",
+          "count": 1,
+          "attacks": [
+            {
+              "A": 3,
+              "WS": 3,
+              "S": 4,
+              "AP": 1,
+              "Dmg": 1,
+              "bonus": [
+                "rending"
+              ]
+            },
+            {
+              "A": 1,
+              "WS": 3,
+              "S": 4,
+              "AP": 0,
+              "Dmg": 1,
+              "bonus": []
+            }
+          ] 
+        },
+        {
+          "name": "Acolyte Hybrid with Rock Saw",
+          "description": "Heavy Rock Saw",
+          "count": 2,
+          "attacks": [
+            {
+              "A": 2,
+              "WS": 3,
+              "S": 4,
+              "AP": 4,
+              "Dmg": 2,
+              "bonus": [
+                "Sx2"
+              ]
+            }
+          ] 
+        }
+      ],
+      "buffs": [
+        [],
+        ["A+1", "S+1"]
+      ]
+    },
+    {
+      "name": "Acolyte Hybrids",
+      "description": "4 Rock Saws",
+      "members": [
+        {
+          "name": "Acolyte Hybrid",
+          "description": "No special weapon",
+          "count": 15,
+          "attacks": [
+            {
+              "A": 2,
+              "WS": 3,
+              "S": 4,
+              "AP": 1,
+              "Dmg": 1,
+              "bonus": [
+                "rending"
+              ]
+            },
+            {
+              "A": 1,
+              "WS": 3,
+              "S": 4,
+              "AP": 0,
+              "Dmg": 1,
+              "bonus": []
+            }
+          ] 
+        },
+        {
+          "name": "Acolyte Leader",
+          "description": "No special weapon",
+          "count": 1,
+          "attacks": [
+            {
+              "A": 3,
+              "WS": 3,
+              "S": 4,
+              "AP": 1,
+              "Dmg": 1,
+              "bonus": [
+                "rending"
+              ]
+            },
+            {
+              "A": 1,
+              "WS": 3,
+              "S": 4,
+              "AP": 0,
+              "Dmg": 1,
+              "bonus": []
+            }
+          ] 
+        },
+        {
+          "name": "Acolyte Hybrid with Rock Saw",
+          "description": "Heavy Rock Saw",
+          "count": 4,
+          "attacks": [
+            {
+              "A": 2,
+              "WS": 3,
+              "S": 4,
+              "AP": 4,
+              "Dmg": 2,
+              "bonus": [
+                "Sx2"
+              ]
+            }
+          ] 
+        }
+      ],
+      "buffs": [
+        [],
+        ["A+1", "S+1"]
+      ]
+    },
+    {
+      "name": "Acolyte Hybrids",
+      "description": "6 Rock Saws",
+      "members": [
+        {
+          "name": "Acolyte Hybrid",
+          "description": "No special weapon",
+          "count": 13,
+          "attacks": [
+            {
+              "A": 2,
+              "WS": 3,
+              "S": 4,
+              "AP": 1,
+              "Dmg": 1,
+              "bonus": [
+                "rending"
+              ]
+            },
+            {
+              "A": 1,
+              "WS": 3,
+              "S": 4,
+              "AP": 0,
+              "Dmg": 1,
+              "bonus": []
+            }
+          ] 
+        },
+        {
+          "name": "Acolyte Leader",
+          "description": "No special weapon",
+          "count": 1,
+          "attacks": [
+            {
+              "A": 3,
+              "WS": 3,
+              "S": 4,
+              "AP": 1,
+              "Dmg": 1,
+              "bonus": [
+                "rending"
+              ]
+            },
+            {
+              "A": 1,
+              "WS": 3,
+              "S": 4,
+              "AP": 0,
+              "Dmg": 1,
+              "bonus": []
+            }
+          ] 
+        },
+        {
+          "name": "Acolyte Hybrid with Rock Saw",
+          "description": "Heavy Rock Saw",
+          "count": 6,
+          "attacks": [
+            {
+              "A": 2,
+              "WS": 3,
+              "S": 4,
+              "AP": 4,
+              "Dmg": 2,
+              "bonus": [
+                "Sx2"
+              ]
+            }
+          ] 
+        }
+      ],
+      "buffs": [
+        [],
+        ["A+1", "S+1"]
+      ]
+    },
+    {
+      "name": "Acolyte Hybrids",
+      "description": "8 Rock Saws",
+      "members": [
+        {
+          "name": "Acolyte Hybrid",
+          "description": "No special weapon",
+          "count": 11,
+          "attacks": [
+            {
+              "A": 2,
+              "WS": 3,
+              "S": 4,
+              "AP": 1,
+              "Dmg": 1,
+              "bonus": [
+                "rending"
+              ]
+            },
+            {
+              "A": 1,
+              "WS": 3,
+              "S": 4,
+              "AP": 0,
+              "Dmg": 1,
+              "bonus": []
+            }
+          ] 
+        },
+        {
+          "name": "Acolyte Leader",
+          "description": "No special weapon",
+          "count": 1,
+          "attacks": [
+            {
+              "A": 3,
+              "WS": 3,
+              "S": 4,
+              "AP": 1,
+              "Dmg": 1,
+              "bonus": [
+                "rending"
+              ]
+            },
+            {
+              "A": 1,
+              "WS": 3,
+              "S": 4,
+              "AP": 0,
+              "Dmg": 1,
+              "bonus": []
+            }
+          ] 
+        },
+        {
+          "name": "Acolyte Hybrid with Rock Saw",
+          "description": "Heavy Rock Saw",
+          "count": 8,
+          "attacks": [
+            {
+              "A": 2,
+              "WS": 3,
+              "S": 4,
+              "AP": 4,
+              "Dmg": 2,
+              "bonus": [
+                "Sx2"
+              ]
+            }
+          ] 
+        }
+      ],
+      "buffs": [
+        [],
+        ["A+1", "S+1"]
+      ]
+    },
+    {
+      "name": "Purestrain Genestealers",
+      "description": "Unit over 9 models attacking with RC",
+      "members": [
+        {
+          "name": "Genestealer",
+          "description": "Rending Claws",
+          "count": 20,
+          "attacks": [
+            {
+              "A": 4,
+              "WS": 3,
+              "S": 4,
+              "AP": 1,
+              "Dmg": 1,
+              "bonus": [
+                "rending"
+              ]
+            }
+          ] 
+        }
+      ],
+      "buffs": [
+        [],
+        ["A+1", "S+1"]
+      ]
+    },
+    {
+      "name": "Purestrain Genestealers",
+      "description": "Unit over 9 models attacking with ST",
+      "members": [
+        {
+          "name": "Genestealer",
+          "description": "Scything Talons",
+          "count": 20,
+          "attacks": [
+            {
+              "A": 4,
+              "WS": 3,
+              "S": 4,
+              "AP": 0,
+              "Dmg": 1,
+              "bonus": [
+                "reroll1toHit"
+              ]
+            }
+          ] 
+        }
+      ],
+      "buffs": [
+        [],
+        ["A+1", "S+1"]
+      ]
+    }
+  ]
+}
