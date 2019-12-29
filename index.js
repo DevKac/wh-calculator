@@ -12,7 +12,7 @@ const helperPrettify = require('./helpers/prettify.js');
   // todo: collect it to some CSV or sth
   // todo: add some cli menu?
   
-  console.log('Welcone to Warhammer calculator!');
+  console.log('Welcome to WH calculator!');
   helperPrettify.displaySpace();
   
   if (config.testing) {
@@ -21,11 +21,11 @@ const helperPrettify = require('./helpers/prettify.js');
     helperPrettify.displaySpace();
   }
   
-  if (config.unitsDmg) {
-    console.log('Damage output from specified units');
-    blockUnitsDmg.calculateUnitsDmg();
-    helperPrettify.displaySpace();
-  }
+  // if (config.unitsDmg) {
+  //   console.log('Damage output from specified units');
+  //   blockUnitsDmg.calculateUnitsDmg();
+  //   helperPrettify.displaySpace();
+  // }
   
   if (config.charges) {
     console.log('Charges');
@@ -33,10 +33,10 @@ const helperPrettify = require('./helpers/prettify.js');
     helperPrettify.displaySpace(); 
   }
 
-  if (config.psionic) {
-    console.log('Psionic');
-    blockPsionic.calculatePsionic();
-    helperPrettify.displaySpace(); 
-  }
+  // if (config.psionic) {
+  //   console.log('Psionic');
+  //   blockPsionic.calculatePsionic();
+  //   helperPrettify.displaySpace(); 
+  // }
   
 })();

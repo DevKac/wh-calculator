@@ -1,0 +1,59 @@
+[
+  {
+    "name": "Roll with 2 dices",
+    "dices": 2,
+    "modifier": 0,
+    "reroll": null
+  },
+  {
+    "name": "Roll with 2 dices and full reroll",
+    "dices": 2,
+    "modifier": 0,
+    "reroll": "full"
+  },
+  {
+    "name": "Roll with 2 dices +1 and full reroll",
+    "dices": 2,
+    "modifier": 1,
+    "reroll": "full"
+  },
+  {
+    "name": "Roll with 3 dices and discard lowest",
+    "dices": 3,
+    "modifier": 0,
+    "reroll": null,
+    "discardLowest": 1
+  },
+  {
+    "name": "Roll with 3 dices +1 and discard lowest",
+    "dices": 3,
+    "modifier": 1,
+    "reroll": null,
+    "discardLowest": 1
+  },
+  {
+    "name": "Roll with 3 dices +1 full reroll and discard lowest",
+    "dices": 3,
+    "modifier": 1,
+    "reroll": "full",
+    "discardLowest": 1
+  },
+  {
+    "name": "Roll with 3 dices",
+    "dices": 3,
+    "modifier": 0,
+    "reroll": null
+  },
+  {
+    "name": "Roll with 3 dices +1",
+    "dices": 3,
+    "modifier": 1,
+    "reroll": null
+  },
+  {
+    "name": "Roll with 3 dices +1 and reroll lowest",
+    "dices": 3,
+    "modifier": 1,
+    "reroll": "lowest"
+  }
+]

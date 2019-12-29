@@ -1,4 +1,11 @@
-function rollSumChance(querySum, dice = 2, rerolls = [], exactRoll = false, typeOfDice = 6) {
+// export interface RollSumChanceSetting {
+//   numberOfDices: number;
+//   typeOfRerolls: string[];
+//   numberOfLowestResultsDiscarded: number;
+//   exactRollNeeded: boolean;
+//   possibleResultsOnDice: number;
+// }
+function rollSumChance(querySum, dice = 2, rerolls = [], exactRoll = false, typeOfDice = 6, useNHighest = null) {
   const extendedDice = dice * 2;
   let rollResult;
   let x = 0, n = 0;
@@ -12,20 +19,20 @@ function rollSumChance(querySum, dice = 2, rerolls = [], exactRoll = false, type
       // special reroll cases
       let alreadyMatched = false;
       rollResultAfterReroll = rollResult.slice(-dice);
-      if (isCorrectResult(rollResultAfterReroll, querySum, exactRoll)) {
+      if (isCorrectResult(rollResultAfterReroll, useNHighest, querySum, exactRoll)) {
         alreadyMatched = true;
         x++
       }
       if (alreadyMatched === false && rerolls.includes('lowest')) {
         rollResultAfterReroll = getRerolledLowest(rollResult.slice(0, 1), rollResultAfterReroll);
-        if (isCorrectResult(rollResultAfterReroll, querySum, exactRoll)) {
+        if (isCorrectResult(rollResultAfterReroll, useNHighest, querySum, exactRoll)) {
           alreadyMatched = true;
           x++
         }
       }
       if (alreadyMatched === false && rerolls.includes('full')) {
         rollResultAfterReroll = rollResult.slice(0, dice);
-        if (isCorrectResult(rollResultAfterReroll, querySum, exactRoll)) {
+        if (isCorrectResult(rollResultAfterReroll, useNHighest, querySum, exactRoll)) {
           alreadyMatched = true;
           x++
         }
@@ -33,7 +40,7 @@ function rollSumChance(querySum, dice = 2, rerolls = [], exactRoll = false, type
     } else {
       // reroll results specified in reroll array
       rollResultAfterReroll = rerollResults(rollResult.slice(0, dice), rollResult.slice(-dice), rerolls);
-      if (isCorrectResult(rollResultAfterReroll, querySum, exactRoll)) {
+      if (isCorrectResult(rollResultAfterReroll, useNHighest, querySum, exactRoll)) {
         x++
       }
     }
@@ -53,8 +60,8 @@ function rollSumChance(querySum, dice = 2, rerolls = [], exactRoll = false, type
       throw new Error('Number is out of range!');
     }
   }
-  function isCorrectResult(currentRoll, querySum, exactRoll) {
-    const totalSum = currentRoll.reduce((total, num) => { return total + num })
+  function isCorrectResult(currentRoll, useNHighest, querySum, exactRoll) {
+    const totalSum = pickNHighestRolls(currentRoll, useNHighest).reduce((total, num) => { return total + num })
     if (exactRoll) {
       if (totalSum === querySum) {
         return true;
@@ -80,6 +87,15 @@ function rollSumChance(querySum, dice = 2, rerolls = [], exactRoll = false, type
         return item;
       }
     });
+  }
+  function pickNHighestRolls(currentRoll, useNHighest) {
+    if (!currentRoll || !useNHighest || currentRoll.length === useNHighest) {
+      return currentRoll;
+    }
+    for (let i = 0; i < useNHighest; i++) {
+      currentRoll.splice(currentRoll.indexOf(Math.min(...currentRoll)), 1);
+    }
+    return currentRoll;
   }
 }
 module.exports.rollSumChance = rollSumChance;
